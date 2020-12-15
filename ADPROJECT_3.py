@@ -19,10 +19,12 @@ class WindowClass(QMainWindow, form_class) :
 
     def loadImageFromFile_A(self) :
         #QPixmap 객체 생성 후 이미지 파일을 이용하여 QPixmap에 사진 데이터 Load하고, Label을 이용하여 화면에 표시
-        MV = ["런","800","이웃사촌","그날이 온다","더 프롬","삼진그룹 토익반","프리키 데스데이 순한맛","미드나이트 스카이","극장판 바이올렛 에버가든","조제","노트북"]
+
+        MV = ["런","800","이웃사촌","그날이 온다","더 프롬","삼진그룹 영어토익반","프리키 데스데이 순한맛","미드나이트 스카이","극장판 바이올렛 에버가든","조제","노트북"]
         for title in MV :
-            if self.MovieList.currentText == title:
+            if self.MovieList.currentText() == title:
                 self.ImageGet("./ADproject/"+title+".png")
+
 
 
     def radiobuttonclicked_A(self):
